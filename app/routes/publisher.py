@@ -23,7 +23,7 @@ class Publisher:
             try:
                 # Try to declare queue
                 channel.queue_declare(queue='queue', durable=True)
-            except:
+            except Exception as e:
                 # recreate channel if queue exists.
                 channel = self._create_channel()
 

@@ -13,7 +13,7 @@ RUN apk update \
 # copy source code
 COPY . /app
 
-# install ingest requirements
+# install sockets requirements
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 
 # set as workdir app directory
